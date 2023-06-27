@@ -77,7 +77,6 @@ def main():
                 print('Usage: flood <target> <workers> <rpc> <timer>')
                 print('Example: flood https://example.com 500 250 60')
 		    
-#177MEMBERS
 	elif "god" in cnc:
             try:
                 ip = cnc.split()[1]
